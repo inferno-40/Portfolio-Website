@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>document.documentElement.classList.add('js-anim');</script>
+<script>document.documentElement.classList.add('js-anim', 'reveal-anim');</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Shivansh Sharma — Backend Engineer</title>
@@ -9,6 +9,13 @@
 <meta property="og:title" content="Shivansh Sharma — Backend Engineer" />
 <meta property="og:description" content="Backend engineer building high-throughput, distributed systems in Java and Kafka. SDE 2 @ Oracle." />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="assets/social-preview.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Shivansh Sharma — Backend Engineer" />
+<meta name="twitter:description" content="Backend engineer building high-throughput, distributed systems in Java and Kafka. SDE 2 @ Oracle." />
+<meta name="twitter:image" content="assets/social-preview.png" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,8 +71,31 @@
     </div>
   </section>
 
+  <!-- Proof points -->
+  <section class="stats wrap reveal" aria-label="Key metrics">
+    <p class="stats-prompt code">$ stats --backend</p>
+    <div class="stats-grid">
+      <div class="stat">
+        <p class="stat-value heading-lg">12M+</p>
+        <p class="stat-label label">weekly events processed</p>
+      </div>
+      <div class="stat">
+        <p class="stat-value heading-lg">55M+</p>
+        <p class="stat-label label">patient records at scale</p>
+      </div>
+      <div class="stat">
+        <p class="stat-value heading-lg">99.9%</p>
+        <p class="stat-label label">read availability</p>
+      </div>
+      <div class="stat">
+        <p class="stat-value heading-lg">90%→65%</p>
+        <p class="stat-label label">peak CPU after redesign</p>
+      </div>
+    </div>
+  </section>
+
   <!-- About -->
-  <section class="section wrap" id="about">
+  <section class="section wrap reveal" id="about">
     <p class="section-eyebrow label">01 ABOUT</p>
     <h2 class="section-title heading-lg">About</h2>
 
@@ -85,7 +115,7 @@
   </section>
 
   <!-- Skills -->
-  <section class="section wrap" id="skills">
+  <section class="section wrap reveal" id="skills">
     <p class="section-eyebrow label">02 SKILLS</p>
     <h2 class="section-title heading-lg">Skills</h2>
 
@@ -183,7 +213,7 @@
   </section>
 
   <!-- Projects -->
-  <section class="section wrap" id="projects">
+  <section class="section wrap reveal" id="projects">
     <p class="section-eyebrow label">03 PROJECTS</p>
     <h2 class="section-title heading-lg">Projects</h2>
 
@@ -211,11 +241,22 @@
         <p class="card-log code"><span class="tag-info">[INFO]</span> traced &amp; monitored across <span class="metric">3 datastores</span> — MongoDB, 2× PostgreSQL</p>
         <a class="btn btn-text label card-link" href="https://github.com/inferno-40/Online-shopping-app" target="_blank" rel="noopener">&gt;_ VIEW SOURCE</a>
       </article>
+
+      <article class="card">
+        <h3 class="card-title heading-md">Scalable Discussion Forum Platform</h3>
+        <p class="card-desc body">Event-driven forum on Kafka with idempotent write APIs, rate limiting, and stateless load balancing — designed and load-tested solo.</p>
+        <div class="card-tags label">
+          <span class="card-tag">Java</span><span class="card-tag">Spring Boot</span><span class="card-tag">Kafka</span><span class="card-tag">MySQL</span><span class="card-tag">Redis</span>
+        </div>
+        <p class="card-log code"><span class="tag-info">[INFO]</span> load-tested to <span class="metric">10K+</span> concurrent users, <span class="metric">5K+</span> RPS</p>
+        <p class="card-log code"><span class="tag-info">[INFO]</span> sustained <span class="metric">99.9%</span> read availability under container kills</p>
+        <a class="btn btn-text label card-link" href="https://github.com/inferno-40" target="_blank" rel="noopener">&gt;_ VIEW SOURCE</a>
+      </article>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="section wrap" id="experience">
+  <section class="section wrap reveal" id="experience">
     <p class="section-eyebrow label">04 EXPERIENCE</p>
     <h2 class="section-title heading-lg">Experience</h2>
 
@@ -261,7 +302,7 @@
   </section>
 
   <!-- Contact -->
-  <section class="section wrap" id="contact">
+  <section class="section wrap reveal" id="contact">
     <p class="section-eyebrow label">05 CONTACT</p>
     <h2 class="section-title heading-lg">Contact</h2>
 

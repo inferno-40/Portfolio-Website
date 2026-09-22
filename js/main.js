@@ -157,4 +157,53 @@
       revealAll();
     }
   })();
+
+  // Staged entrances: sections fade/slide in as they cross into view.
+  // Same safety pattern as the typewriter — no-JS and reduced-motion
+  // visitors just see everything, and a timeout guarantees nothing is
+  // ever left stranded invisible.
+  (function scrollReveal() {
+    var root = document.documentElement;
+
+    function revealAllNow() {
+      root.classList.remove("reveal-anim");
+      Array.prototype.slice.call(document.querySelectorAll(".reveal")).forEach(function (el) {
+        el.classList.add("is-in");
+      });
+    }
+
+    try {
+      var reduceMotion =
+        window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var targets = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+
+      if (reduceMotion || !targets.length || !("IntersectionObserver" in window)) {
+        revealAllNow();
+        return;
+      }
+
+      var safety = setTimeout(revealAllNow, 5000);
+
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-in");
+              observer.unobserve(entry.target);
+            }
+          });
+          if (!document.querySelector(".reveal:not(.is-in)")) {
+            clearTimeout(safety);
+          }
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      );
+
+      targets.forEach(function (el) {
+        observer.observe(el);
+      });
+    } catch (err) {
+      revealAllNow();
+    }
+  })();
 })();

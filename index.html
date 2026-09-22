@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>document.documentElement.classList.add('js-anim', 'reveal-anim');</script>
+<script>document.documentElement.classList.add('reveal-anim');</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Shivansh Sharma — Backend Engineer</title>
-<meta name="description" content="Shivansh Sharma — backend engineer building high-throughput, distributed systems in Java and Kafka. SDE 2 @ Oracle. IIT Roorkee '23." />
+<meta name="description" content="Shivansh Sharma — backend engineer building resilient distributed systems, high-throughput data pipelines, and observable infrastructure. SDE 2 @ Oracle." />
+<meta name="author" content="Shivansh Sharma" />
 <meta property="og:title" content="Shivansh Sharma — Backend Engineer" />
-<meta property="og:description" content="Backend engineer building high-throughput, distributed systems in Java and Kafka. SDE 2 @ Oracle." />
+<meta property="og:description" content="Backend engineer building resilient distributed systems, high-throughput data pipelines, and observable infrastructure. SDE 2 @ Oracle." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="assets/social-preview.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Shivansh Sharma — Backend Engineer" />
-<meta name="twitter:description" content="Backend engineer building high-throughput, distributed systems in Java and Kafka. SDE 2 @ Oracle." />
+<meta name="twitter:description" content="Backend engineer building resilient distributed systems, high-throughput data pipelines, and observable infrastructure." />
 <meta name="twitter:image" content="assets/social-preview.png" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 <a class="skip-link code" href="#main">Skip to content</a>
+<div aria-hidden="true" class="bg-grid"></div>
 
 <header class="nav" id="siteNav">
   <div class="wrap nav-inner">
-    <a class="nav-mark code" href="#top">~/shivansh $</a>
+    <a class="nav-brand" href="#top" aria-label="Shivansh Sharma, home">
+      <span class="nav-badge">SS</span>
+      <span class="nav-handle code">shivansh<span class="accent">.dev</span></span>
+    </a>
 
     <button class="nav-toggle label" id="navToggle" aria-expanded="false" aria-controls="navLinks">MENU</button>
 
     <nav aria-label="Primary">
-      <ul class="nav-links label" id="navLinks">
-        <li><a class="nav-link" href="#about" data-section="about">01 ABOUT</a></li>
-        <li><a class="nav-link" href="#skills" data-section="skills">02 SKILLS</a></li>
-        <li><a class="nav-link" href="#projects" data-section="projects">03 PROJECTS</a></li>
-        <li><a class="nav-link" href="#experience" data-section="experience">04 EXPERIENCE</a></li>
-        <li><a class="nav-link" href="#contact" data-section="contact">05 CONTACT</a></li>
+      <ul class="nav-links code" id="navLinks">
+        <li><a class="nav-link" href="#about" data-section="about">/about</a></li>
+        <li><a class="nav-link" href="#work" data-section="work">/work</a></li>
+        <li><a class="nav-link" href="#stack" data-section="stack">/stack</a></li>
+        <li><a class="nav-link" href="#experience" data-section="experience">/experience</a></li>
+        <li><a class="nav-link" href="#contact" data-section="contact">/contact</a></li>
       </ul>
     </nav>
 
-    <a class="btn btn-primary label nav-cta desktop-only" href="#contact">&gt;_ ASK ME</a>
+    <a class="btn btn-primary nav-cta desktop-only" href="mailto:ssiitr2000@gmail.com"><span>Hire me</span></a>
   </div>
 </header>
 
@@ -50,63 +55,74 @@
 
   <!-- Hero -->
   <section class="hero wrap" id="top">
-    <div class="term">
-      <div class="term-bar code">
-        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
-        <span class="term-path">shivansh@backend:~$</span>
+    <div class="hero-grid">
+      <div class="hero-term-col animate-rise" style="animation-delay:50ms">
+        <p class="hero-term-label code"><span class="dot animate-pulse-signal" aria-hidden="true"></span> ~/portfolio — zsh</p>
+        <div class="term">
+          <span class="term-scan animate-scan" aria-hidden="true"></span>
+          <div class="term-bar">
+            <span class="term-dot red"></span><span class="term-dot yellow"></span><span class="term-dot green"></span>
+            <span class="term-path code">shivansh@backend: ~/whoami</span>
+          </div>
+          <div class="term-body code">
+            <p class="term-line term-prompt">$ whoami</p>
+            <p class="term-line term-out">Shivansh Sharma — Backend Engineer</p>
+            <p class="term-line term-prompt term-gap">$ cat responsibilities.txt</p>
+            <p class="term-line term-out">· Distributed systems &amp; event-driven APIs</p>
+            <p class="term-line term-out">· High-throughput data pipelines (12M+ events/week)</p>
+            <p class="term-line term-out">· Reliability, observability, zero-downtime deploys</p>
+            <p class="term-line term-prompt term-gap">$ uptime --stack</p>
+            <p class="term-line term-out accent">Java · Kafka · Spring Boot · Kubernetes · PostgreSQL</p>
+            <p class="term-line term-out term-gap">$ deploy --env production<span class="term-cursor animate-caret" aria-hidden="true">▋</span></p>
+          </div>
+        </div>
       </div>
-      <div class="term-body">
-        <p class="term-line term-prompt code"><span class="glyph">$</span> <span class="tw">whoami</span></p>
-        <p class="term-name display"><span class="tw">Shivansh Sharma</span></p>
-        <p class="term-line term-prompt code"><span class="glyph">$</span> <span class="tw">cat role.txt</span></p>
-        <p class="term-line term-out code"><span class="tw">Backend Engineer @ Oracle — </span><span class="tw accent">Java, Kafka, Spring Boot, distributed systems</span></p>
-        <p class="term-line term-prompt code"><span class="glyph">$</span> <span class="tw">cat status.txt</span></p>
-        <p class="term-line term-out code"><span class="tw">3+ years · IIT Roorkee '23 · open to SDE-2 roles</span><span class="term-cursor" id="termCursor" aria-hidden="true"></span></p>
 
-        <div class="term-actions" id="termActions">
-          <a class="btn btn-primary label" href="#projects">VIEW PROJECTS</a>
-          <a class="btn btn-secondary label" href="assets/Shivansh_Sharma_Resume.pdf" download>RÉSUMÉ.PDF</a>
+      <div class="hero-copy-col animate-rise" style="animation-delay:150ms">
+        <div class="hero-badge code">
+          <span class="dot animate-pulse-signal" aria-hidden="true"></span> open to SDE-2 roles
+        </div>
+        <h1 class="hero-headline display">I build the<br /><span class="accent">systems</span><br />behind the scale.</h1>
+        <p class="hero-sub body">3+ years shipping resilient backends that stay fast under load — clinical data pipelines, high-throughput search, and the infrastructure that keeps them running. I care about the parts users never see.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work"><span>view_projects.sh</span><span class="sweep" aria-hidden="true"></span></a>
+          <a class="btn btn-secondary" href="#experience">experience.log</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Proof points -->
-  <section class="stats wrap reveal" aria-label="Key metrics">
-    <p class="stats-prompt code">$ stats --backend</p>
-    <div class="stats-grid">
-      <div class="stat">
-        <p class="stat-value heading-lg">12M+</p>
-        <p class="stat-label label">weekly events processed</p>
+    <div class="metrics animate-rise" style="animation-delay:250ms" aria-label="Key metrics">
+      <div class="metric">
+        <div class="metric-value">12<span class="unit">M+</span></div>
+        <div class="metric-label">weekly events processed</div>
       </div>
-      <div class="stat">
-        <p class="stat-value heading-lg">55M+</p>
-        <p class="stat-label label">patient records at scale</p>
+      <div class="metric">
+        <div class="metric-value">55<span class="unit">M+</span></div>
+        <div class="metric-label">patient records at scale</div>
       </div>
-      <div class="stat">
-        <p class="stat-value heading-lg">99.9%</p>
-        <p class="stat-label label">read availability</p>
+      <div class="metric">
+        <div class="metric-value">45<span class="unit">K+</span></div>
+        <div class="metric-label">req/sec — redis server</div>
       </div>
-      <div class="stat">
-        <p class="stat-value heading-lg">90%→65%</p>
-        <p class="stat-label label">peak CPU after redesign</p>
+      <div class="metric">
+        <div class="metric-value">0.2<span class="unit">ms</span></div>
+        <div class="metric-label">p50 latency — redis server</div>
       </div>
     </div>
   </section>
 
   <!-- About -->
   <section class="section wrap reveal" id="about">
-    <p class="section-eyebrow label">01 ABOUT</p>
-    <h2 class="section-title heading-lg">About</h2>
+    <p class="section-eyebrow">// whoami</p>
+    <h2 class="section-title heading-lg">Backend engineer, systems-first.</h2>
 
     <div class="about-body body">
-      <p><span class="code" style="color:var(--ink-muted)">$ cat about.txt</span></p>
-      <p>I'm a backend engineer with 3+ years building high-throughput, event-driven distributed systems in Java and Kafka. I'm currently an SDE 2 at Oracle, working on the Clinical Data Exchange Hub (CDeX) — moving clinical documents between healthcare providers and payers across 12M+ weekly events and 55M+ patient records.</p>
+      <p>I'm a backend engineer with <strong>3+ years</strong> building high-throughput, event-driven distributed systems in Java and Kafka. I'm currently an SDE 2 at Oracle, working on the Clinical Data Exchange Hub (CDeX) — moving clinical documents between healthcare providers and payers across 12M+ weekly events and 55M+ patient records.</p>
       <p>Before Oracle, I spent two years at ZL Technologies driving backend feature development within Enterprise Analytics, including a stint as tech lead for a 4-engineer team. I graduated from IIT Roorkee in 2023.</p>
       <p>I care about clean, well-tested code and solving hard problems at scale — and I'm open to backend / SDE-2 opportunities in distributed systems and high-scale infrastructure.</p>
     </div>
 
-    <div class="about-meta code">
+    <div class="about-meta">
       <span><span class="k">location</span> Hyderabad, India</span>
       <span><span class="k">role</span> SDE 2 @ Oracle</span>
       <span><span class="k">education</span> B.Tech, IIT Roorkee '23</span>
@@ -114,204 +130,200 @@
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="section wrap reveal" id="skills">
-    <p class="section-eyebrow label">02 SKILLS</p>
-    <h2 class="section-title heading-lg">Skills</h2>
-
-    <div class="skill-group">
-      <p class="skill-caption label">CORE STACK — hover a skill for its proficiency</p>
-      <div class="skill-row">
-        <span class="badge has-bar body-sm" tabindex="0">Java<span class="bar"><span class="bar-fill" style="width:90%"></span></span><span class="tip body-sm">Java — 90%</span></span>
-        <span class="badge has-bar body-sm" tabindex="0">Spring Boot<span class="bar"><span class="bar-fill" style="width:85%"></span></span><span class="tip body-sm">Spring Boot — 85%</span></span>
-        <span class="badge has-bar body-sm" tabindex="0">Kafka<span class="bar"><span class="bar-fill" style="width:80%"></span></span><span class="tip body-sm">Kafka — 80%</span></span>
-        <span class="badge has-bar body-sm" tabindex="0">Kubernetes<span class="bar"><span class="bar-fill" style="width:70%"></span></span><span class="tip body-sm">Kubernetes — 70%</span></span>
-        <span class="badge has-bar body-sm" tabindex="0">Redis<span class="bar"><span class="bar-fill" style="width:75%"></span></span><span class="tip body-sm">Redis — 75%</span></span>
+  <!-- Work -->
+  <section class="section wrap reveal" id="work">
+    <div class="section-head-row">
+      <div>
+        <p class="section-eyebrow">// selected_work</p>
+        <h2 class="section-title heading-lg">Systems built to hold.</h2>
       </div>
+      <span class="section-counter">03 / 03</span>
     </div>
 
-    <div class="skill-group">
-      <p class="skill-caption label">CORE COMPETENCIES</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">DSA</span>
-        <span class="badge-plain">Distributed Systems</span>
-        <span class="badge-plain">System Design (HLD/LLD)</span>
-        <span class="badge-plain">Microservices</span>
-        <span class="badge-plain">Event-Driven Architecture</span>
-      </div>
-    </div>
+    <div class="work-list">
+      <article class="work-card">
+        <div class="work-info">
+          <span class="work-index">01 / case study</span>
+          <h3 class="work-name heading-md">Document-Search Subsystem</h3>
+          <p class="work-desc">3-microservice search layer for Oracle's Clinical Data Exchange Hub — authored the design RFCs, built one service end to end, and co-developed the rest.</p>
+          <div class="work-tags">
+            <span class="work-tag">Java</span><span class="work-tag">Spring Boot</span><span class="work-tag">Kafka</span><span class="work-tag">OKE</span>
+          </div>
+          <a class="btn btn-text work-source" href="#experience">&gt;_ more_in experience.log</a>
+        </div>
+        <div class="work-flow-col">
+          <div class="flow-panel">
+            <div class="flow-head"><span>request-flow</span><span class="healthy">healthy</span></div>
+            <div class="flow-steps">
+              <span class="flow-step">ingest</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
+              <span class="flow-step">search</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
+              <span class="flow-step">notify</span>
+            </div>
+            <div class="flow-metric">
+              <p class="flow-metric-value">90%→65%</p>
+              <p class="flow-metric-detail">peak CPU · 25% of 12M+ weekly events</p>
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <div class="skill-group">
-      <p class="skill-caption label">LANGUAGES &amp; FRAMEWORKS</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">SQL</span>
-        <span class="badge-plain">C++</span>
-        <span class="badge-plain">Micronaut</span>
-      </div>
-    </div>
+      <article class="work-card">
+        <div class="work-info">
+          <span class="work-index">02 / case study</span>
+          <h3 class="work-name heading-md">Online Shopping App</h3>
+          <p class="work-desc">Microservices e-commerce platform — an API gateway and service discovery in front of product, order, inventory, and notification services, each independently deployable and horizontally scalable.</p>
+          <div class="work-tags">
+            <span class="work-tag">Java</span><span class="work-tag">Spring Cloud</span><span class="work-tag">Kafka</span><span class="work-tag">Keycloak</span>
+          </div>
+          <a class="btn btn-text work-source" href="https://github.com/inferno-40/Online-shopping-app" target="_blank" rel="noopener">&gt;_ view_source</a>
+        </div>
+        <div class="work-flow-col">
+          <div class="flow-panel">
+            <div class="flow-head"><span>request-flow</span><span class="healthy">healthy</span></div>
+            <div class="flow-steps">
+              <span class="flow-step">gateway</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
+              <span class="flow-step">order</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
+              <span class="flow-step">notify</span>
+            </div>
+            <div class="flow-metric">
+              <p class="flow-metric-value">6-service</p>
+              <p class="flow-metric-detail">MongoDB · 2× PostgreSQL · Resilience4j</p>
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <div class="skill-group">
-      <p class="skill-caption label">MESSAGING &amp; SEARCH</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">Lucene</span>
-        <span class="badge-plain">Apache Tika</span>
-        <span class="badge-plain">MapReduce</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <p class="skill-caption label">CLOUD &amp; INFRASTRUCTURE</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">OCI (OKE)</span>
-        <span class="badge-plain">AWS (EC2, S3, IAM, VPC)</span>
-        <span class="badge-plain">Docker</span>
-        <span class="badge-plain">Terraform</span>
-        <span class="badge-plain">MinIO</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <p class="skill-caption label">DATABASES &amp; CACHING</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">Oracle ADB</span>
-        <span class="badge-plain">MySQL</span>
-        <span class="badge-plain">PostgreSQL</span>
-        <span class="badge-plain">MongoDB</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <p class="skill-caption label">SECURITY</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">JWT</span>
-        <span class="badge-plain">OAuth2</span>
-        <span class="badge-plain">TLS (DigiCert)</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <p class="skill-caption label">MONITORING &amp; LOGGING</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">Splunk</span>
-        <span class="badge-plain">New Relic</span>
-        <span class="badge-plain">Grafana</span>
-        <span class="badge-plain">Prometheus</span>
-        <span class="badge-plain">OCI MQL</span>
-      </div>
-    </div>
-
-    <div class="skill-group">
-      <p class="skill-caption label">TESTING &amp; TOOLS</p>
-      <div class="skill-row body-sm">
-        <span class="badge-plain">JUnit</span>
-        <span class="badge-plain">Mockito</span>
-        <span class="badge-plain">JaCoCo</span>
-        <span class="badge-plain">Git</span>
-        <span class="badge-plain">Maven</span>
-      </div>
+      <article class="work-card">
+        <div class="work-info">
+          <span class="work-index">03 / case study</span>
+          <h3 class="work-name heading-md">MyRedis-Java</h3>
+          <p class="work-desc">A multi-threaded Redis server built from scratch in Java over raw TCP sockets, with a hand-built RESP protocol parser/encoder, thread-safe in-memory store, and a custom binary RDB reader/writer for persistence with millisecond-precision TTL.</p>
+          <div class="work-tags">
+            <span class="work-tag">Java</span><span class="work-tag">TCP Sockets</span><span class="work-tag">RESP Protocol</span><span class="work-tag">Multithreading</span>
+          </div>
+          <a class="btn btn-text work-source" href="https://github.com/inferno-40/MyRedis-Java" target="_blank" rel="noopener">&gt;_ view_source</a>
+        </div>
+        <div class="work-flow-col">
+          <div class="flow-panel">
+            <div class="flow-head"><span>request-flow</span><span class="healthy">healthy</span></div>
+            <div class="flow-steps">
+              <span class="flow-step">socket</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
+              <span class="flow-step">parse</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
+              <span class="flow-step">store</span>
+            </div>
+            <div class="flow-metric">
+              <p class="flow-metric-value">45K+ req/s</p>
+              <p class="flow-metric-detail">p50 ≈0.2ms · 0 failed / 50k+ ops</p>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="section wrap reveal" id="projects">
-    <p class="section-eyebrow label">03 PROJECTS</p>
-    <h2 class="section-title heading-lg">Projects</h2>
-
-    <div class="project-grid">
-      <article class="card">
-        <h3 class="card-title heading-md">Document-Search Subsystem</h3>
-        <p class="card-desc body">3-microservice search layer for Oracle's Clinical Data Exchange Hub — authored the design RFCs, built one service end to end, and co-developed the rest.</p>
-        <div class="card-tags label">
-          <span class="card-tag">Java</span><span class="card-tag">Spring Boot</span><span class="card-tag">Kafka</span><span class="card-tag">OKE</span>
+  <!-- Stack -->
+  <section class="section wrap reveal" id="stack">
+    <div class="stack-grid">
+      <div class="stack-intro">
+        <p class="section-eyebrow">// stack.yaml</p>
+        <h2 class="section-title heading-lg">Tools chosen for the constraint.</h2>
+        <p class="body-sm">Boring technology where it works. Purpose-built systems where it matters.</p>
+      </div>
+      <div class="stack-groups">
+        <div class="stack-row">
+          <span class="stack-row-label">core:</span>
+          <div class="stack-row-items"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Kubernetes</span><span>Redis</span></div>
         </div>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> handles <span class="metric">25%</span> of 12M+ weekly events</p>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> peak CPU load <span class="metric">90% → 65%</span></p>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> transmission failures <span class="metric">-25%</span> across 500K+ weekly exchanges</p>
-        <a class="btn btn-text label card-link" href="#experience">&gt;_ MORE IN EXPERIENCE</a>
-      </article>
-
-      <article class="card">
-        <h3 class="card-title heading-md">Online Shopping App</h3>
-        <p class="card-desc body">Microservices e-commerce platform — an API gateway and service discovery in front of product, order, inventory, and notification services, each independently deployable and horizontally scalable.</p>
-        <div class="card-tags label">
-          <span class="card-tag">Java</span><span class="card-tag">Spring Boot</span><span class="card-tag">Spring Cloud</span><span class="card-tag">Kafka</span><span class="card-tag">Keycloak</span><span class="card-tag">Resilience4j</span><span class="card-tag">Prometheus</span>
+        <div class="stack-row">
+          <span class="stack-row-label">concepts:</span>
+          <div class="stack-row-items"><span>DSA</span><span>Distributed Systems</span><span>System Design (HLD/LLD)</span><span>Microservices</span><span>Event-Driven Architecture</span></div>
         </div>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> <span class="metric">6-service</span> backend — gateway, discovery, product/order/inventory/notification</p>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> event-driven order pipeline on Kafka, with Resilience4j retry/circuit-breaker policies</p>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> traced &amp; monitored across <span class="metric">3 datastores</span> — MongoDB, 2× PostgreSQL</p>
-        <a class="btn btn-text label card-link" href="https://github.com/inferno-40/Online-shopping-app" target="_blank" rel="noopener">&gt;_ VIEW SOURCE</a>
-      </article>
-
-      <article class="card">
-        <h3 class="card-title heading-md">Scalable Discussion Forum Platform</h3>
-        <p class="card-desc body">Event-driven forum on Kafka with idempotent write APIs, rate limiting, and stateless load balancing — designed and load-tested solo.</p>
-        <div class="card-tags label">
-          <span class="card-tag">Java</span><span class="card-tag">Spring Boot</span><span class="card-tag">Kafka</span><span class="card-tag">MySQL</span><span class="card-tag">Redis</span>
+        <div class="stack-row">
+          <span class="stack-row-label">languages:</span>
+          <div class="stack-row-items"><span>SQL</span><span>C++</span><span>Micronaut</span></div>
         </div>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> load-tested to <span class="metric">10K+</span> concurrent users, <span class="metric">5K+</span> RPS</p>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> sustained <span class="metric">99.9%</span> read availability under container kills</p>
-        <a class="btn btn-text label card-link" href="https://github.com/inferno-40" target="_blank" rel="noopener">&gt;_ VIEW SOURCE</a>
-      </article>
+        <div class="stack-row">
+          <span class="stack-row-label">messaging:</span>
+          <div class="stack-row-items"><span>Lucene</span><span>Apache Tika</span><span>MapReduce</span></div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-row-label">cloud:</span>
+          <div class="stack-row-items"><span>OCI (OKE)</span><span>AWS (EC2, S3, IAM, VPC)</span><span>Docker</span><span>Terraform</span><span>MinIO</span></div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-row-label">data:</span>
+          <div class="stack-row-items"><span>Oracle ADB</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span></div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-row-label">security:</span>
+          <div class="stack-row-items"><span>JWT</span><span>OAuth2</span><span>TLS (DigiCert)</span></div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-row-label">observability:</span>
+          <div class="stack-row-items"><span>Splunk</span><span>New Relic</span><span>Grafana</span><span>Prometheus</span><span>OCI MQL</span></div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-row-label">testing:</span>
+          <div class="stack-row-items"><span>JUnit</span><span>Mockito</span><span>JaCoCo</span><span>Git</span><span>Maven</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Experience -->
   <section class="section wrap reveal" id="experience">
-    <p class="section-eyebrow label">04 EXPERIENCE</p>
-    <h2 class="section-title heading-lg">Experience</h2>
-
-    <div class="timeline">
-      <div class="entry current">
-        <div class="entry-date code">Jun 2025<br />— Present</div>
-        <div class="entry-rule"></div>
-        <div>
-          <h3 class="entry-role heading-md">SDE 2 · <span class="company">Oracle</span></h3>
-          <p class="entry-location code">Remote</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> co-designed a 3-microservice document-search subsystem via design RFCs, handling 25% of CDeX's 12M+ weekly events and cutting peak CPU load 90% → 65%</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> cut document transmission failures 25% across 500K+ weekly exchanges by reworking retry logic with backoff, jitter, and idempotency checks</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> built Docker-based MinIO and Oracle DB simulators from scratch, cutting pre-deployment testing time 30%</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> raised unit test coverage 60% → 85% by introducing AI-assisted PR reviews and JaCoCo coverage checks in the Maven build</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> wrote canary test scenarios across 5 production services, enabling zero-downtime deployments and faster rollback</p>
-        </div>
+    <div class="exp-grid">
+      <div class="exp-intro">
+        <p class="section-eyebrow">// experience.log</p>
+        <h2 class="section-title heading-lg">Shipping backend systems since 2022.</h2>
       </div>
-
-      <div class="entry">
-        <div class="entry-date code">Jul 2023<br />— Jun 2025</div>
-        <div class="entry-rule"></div>
-        <div>
-          <h3 class="entry-role heading-md">SDE · <span class="company">ZL Technologies</span></h3>
-          <p class="entry-location code">Hyderabad, India</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> led a 4-engineer team as tech lead — broke PRD requirements into sprint tasks and reviewed juniors' code to deliver on time and to spec</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> raised archiving accuracy 60% → 80% by building distributed archiving on message queues, fault-tolerant MapReduce, and JDBC batching</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> slashed a 50M-record re-indexing job 90% (24h → 2h) using a Lucene "index of index" architecture</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> migrated from a proprietary tool to Apache Tika, eliminating $1M in annual licensing fees</p>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date code">May 2022<br />— Jul 2022</div>
-        <div class="entry-rule"></div>
-        <div>
-          <h3 class="entry-role heading-md">Software Engineer Intern · <span class="company">Edvak Inc</span></h3>
-          <p class="entry-location code">Hyderabad, India</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> improved patient data access speed 40% on an Electronic Health Record (EHR) system</p>
-          <p class="entry-bullet body"><span class="glyph">&gt;</span> resolved 10+ dashboard and registration bugs, driving a 15% increase in user satisfaction</p>
-        </div>
-      </div>
+      <ol class="exp-list">
+        <li class="exp-item current">
+          <span class="exp-dot" aria-hidden="true"></span>
+          <p class="exp-date">Jun 2025 — Present</p>
+          <h3 class="exp-role heading-md">SDE 2 · <span class="company">Oracle</span></h3>
+          <p class="exp-location">Remote</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>co-designed a 3-microservice document-search subsystem via design RFCs, handling 25% of CDeX's 12M+ weekly events and cutting peak CPU load 90% → 65%</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>cut document transmission failures 25% across 500K+ weekly exchanges by reworking retry logic with backoff, jitter, and idempotency checks</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>built Docker-based MinIO and Oracle DB simulators from scratch, cutting pre-deployment testing time 30%</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>raised unit test coverage 60% → 85% by introducing AI-assisted PR reviews and JaCoCo coverage checks in the Maven build</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>wrote canary test scenarios across 5 production services, enabling zero-downtime deployments and faster rollback</p>
+        </li>
+        <li class="exp-item">
+          <span class="exp-dot" aria-hidden="true"></span>
+          <p class="exp-date">Jul 2023 — Jun 2025</p>
+          <h3 class="exp-role heading-md">SDE · <span class="company">ZL Technologies</span></h3>
+          <p class="exp-location">Hyderabad, India</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>led a 4-engineer team as tech lead — broke PRD requirements into sprint tasks and reviewed juniors' code to deliver on time and to spec</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>raised archiving accuracy 60% → 80% by building distributed archiving on message queues, fault-tolerant MapReduce, and JDBC batching</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>slashed a 50M-record re-indexing job 90% (24h → 2h) using a Lucene "index of index" architecture</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>migrated from a proprietary tool to Apache Tika, eliminating $1M in annual licensing fees</p>
+        </li>
+        <li class="exp-item">
+          <span class="exp-dot" aria-hidden="true"></span>
+          <p class="exp-date">May 2022 — Jul 2022</p>
+          <h3 class="exp-role heading-md">Software Engineer Intern · <span class="company">Edvak Inc</span></h3>
+          <p class="exp-location">Hyderabad, India</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>improved patient data access speed 40% on an Electronic Health Record (EHR) system</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>resolved 10+ dashboard and registration bugs, driving a 15% increase in user satisfaction</p>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- Contact -->
   <section class="section wrap reveal" id="contact">
-    <p class="section-eyebrow label">05 CONTACT</p>
-    <h2 class="section-title heading-lg">Contact</h2>
-
     <div class="contact-panel">
-      <p class="code" style="color:var(--ink-muted)">$ mail shivansh</p>
-      <p class="body">Open to backend / SDE-2 roles in distributed systems and high-scale infrastructure. Reach out below — I usually reply within a day or two.</p>
-      <div class="contact-actions">
-        <a class="btn btn-primary label" href="mailto:ssiitr2000@gmail.com">SEND A MESSAGE</a>
-        <a class="btn btn-secondary label" href="assets/Shivansh_Sharma_Resume.pdf" download>DOWNLOAD RÉSUMÉ</a>
+      <div class="contact-badge"><span class="dot animate-pulse-signal" aria-hidden="true"></span> open to SDE-2 roles</div>
+      <div class="contact-grid">
+        <div>
+          <h2 class="contact-heading heading-lg">Building something that needs to scale?</h2>
+          <p class="contact-sub">I help teams ship reliable, high-throughput backend systems in Java and Kafka — reach out if that's what you're hiring for.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:ssiitr2000@gmail.com"><span>ssiitr2000@gmail.com →</span></a>
+          <a class="btn btn-secondary" href="assets/Shivansh_Sharma_Resume.pdf" download>résumé.pdf</a>
+        </div>
       </div>
     </div>
   </section>
@@ -319,15 +331,15 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap">
-    <p class="foot-status code"><span class="dot" aria-hidden="true"></span> [STATUS] online · open to backend / SDE-2 roles</p>
-    <ul class="foot-links body-sm">
-      <li><a href="mailto:ssiitr2000@gmail.com">[email]</a></li>
-      <li><a href="https://www.linkedin.com/in/shivansh-sharma-iitr" target="_blank" rel="noopener">[linkedin]</a></li>
-      <li><a href="https://github.com/inferno-40" target="_blank" rel="noopener">[github]</a></li>
-      <li><a href="https://leetcode.com/u/inferno_40" target="_blank" rel="noopener">[leetcode]</a></li>
+  <div class="wrap foot-inner">
+    <p class="foot-copy">© 2026 Shivansh Sharma — compiled with care</p>
+    <ul class="foot-links">
+      <li><a href="mailto:ssiitr2000@gmail.com">email</a></li>
+      <li><a href="https://www.linkedin.com/in/shivansh-sharma-iitr" target="_blank" rel="noopener">linkedin</a></li>
+      <li><a href="https://github.com/inferno-40" target="_blank" rel="noopener">github</a></li>
+      <li><a href="https://leetcode.com/u/inferno_40" target="_blank" rel="noopener">leetcode</a></li>
+      <li class="foot-status"><span class="dot" aria-hidden="true">●</span> all systems nominal</li>
     </ul>
-    <p class="foot-copy body-sm">© whoami --full-name · built with care</p>
   </div>
 </footer>
 

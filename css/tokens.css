@@ -1,91 +1,106 @@
-/* Design tokens — Shivansh Sharma, Terminal Portfolio design system.
-   Intentionally single-theme (dark). Do not add a light theme by inverting these values. */
+/* Design tokens — Terminal Noir
+   Copied from the reference build (Kai Vega / terminal-noir-backend-portfolio),
+   adapted for Shivansh Sharma. oklch throughout — all modern evergreen browsers
+   support the oklch() color function natively. */
 :root {
   /* Color */
-  --surface-0: #0a0f0c;
-  --surface-100: #121813;
-  --surface-200: #1a221c;
-  --border: #263028;
-  --border-strong: #57704f;
-  --ink: #e6f2e8;
-  --ink-muted: #93a696;
-  --ink-dim: #7a8c7d;
-  --accent-cyan: #4dd8c4;
-  --accent-green: #6fe36f;
-  --accent-amber: #e8b339;
-  --accent-red: #ff6b5e;
-  --on-accent: #05130d;
+  --ink: oklch(0.15 0.017 233);
+  --panel: oklch(0.19 0.022 239);
+  --panel-raised: oklch(0.225 0.025 239);
+  --line: oklch(0.28 0.031 229);
+  --signal: oklch(0.78 0.16 160);
+  --signal-bright: oklch(0.86 0.12 175);
+  --soft: oklch(0.86 0.02 224);
+  --dim: oklch(0.6 0.037 225);
+  --terminal-red: oklch(0.67 0.22 27);
+  --terminal-yellow: oklch(0.81 0.17 85);
+  --terminal-green: oklch(0.72 0.2 145);
 
   /* Type */
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
-  /* Spacing (4px scale) */
+  /* Spacing (Tailwind-equivalent scale used by the reference) */
   --space-1: 4px;
+  --space-1_5: 6px;
   --space-2: 8px;
+  --space-2_5: 10px;
   --space-3: 12px;
   --space-4: 16px;
+  --space-5: 20px;
   --space-6: 24px;
+  --space-7: 28px;
   --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
   --space-12: 48px;
+  --space-14: 56px;
   --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
   --space-24: 96px;
+  --space-28: 112px;
 
   /* Radius */
-  --radius-none: 0px;
-  --radius-sm: 2px;
-  --radius-full: 9999px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
 
   /* Shadow */
-  --focus-ring: 0 0 0 3px rgba(77, 216, 196, 0.35);
-  --glow-sm: 0 0 12px rgba(77, 216, 196, 0.25);
+  --shadow-terminal: 0 26px 80px color-mix(in oklab, var(--ink) 72%, transparent);
+  --focus-ring: 0 0 0 3px color-mix(in oklab, var(--signal) 35%, transparent);
 }
 
 /* Type scale utilities */
 .display {
-  font-size: 56px;
-  line-height: 60px;
+  font-family: var(--font-sans);
+  font-size: 60px;
+  line-height: 1.02;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 .heading-lg {
-  font-size: 28px;
-  line-height: 34px;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 600;
 }
 .heading-md {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 600;
 }
 .body {
-  font-size: 15px;
-  line-height: 24px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
   font-weight: 400;
 }
 .body-sm {
-  font-size: 13px;
-  line-height: 20px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.55;
   font-weight: 400;
 }
 .label {
-  font-size: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
   line-height: 16px;
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 .code {
+  font-family: var(--font-mono);
   font-size: 13px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 400;
 }
 
 @media (max-width: 640px) {
   .display {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 38px;
   }
   .heading-lg {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 24px;
   }
 }

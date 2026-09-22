@@ -460,6 +460,23 @@ a {
   margin-left: var(--space-1);
   color: var(--signal);
 }
+.term-cursor.is-typing {
+  animation: none;
+  opacity: 1;
+}
+
+/* Terminal typewriter: hidden only when JS confirms it can animate +
+   reveal (mirrors the scroll-reveal pattern below) -- a no-JS visit, or
+   an early style-recalc before main.js runs, always shows the real text
+   underneath, so nothing here can strand content invisible. */
+html.js-anim .term-body .tw {
+  visibility: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js-anim .term-body .tw {
+    visibility: visible;
+  }
+}
 
 .hero-badge {
   display: inline-flex;

@@ -1,0 +1,91 @@
+/* Design tokens — Shivansh Sharma, Terminal Portfolio design system.
+   Intentionally single-theme (dark). Do not add a light theme by inverting these values. */
+:root {
+  /* Color */
+  --surface-0: #0a0f0c;
+  --surface-100: #121813;
+  --surface-200: #1a221c;
+  --border: #263028;
+  --border-strong: #57704f;
+  --ink: #e6f2e8;
+  --ink-muted: #93a696;
+  --ink-dim: #7a8c7d;
+  --accent-cyan: #4dd8c4;
+  --accent-green: #6fe36f;
+  --accent-amber: #e8b339;
+  --accent-red: #ff6b5e;
+  --on-accent: #05130d;
+
+  /* Type */
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Spacing (4px scale) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Radius */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-full: 9999px;
+
+  /* Shadow */
+  --focus-ring: 0 0 0 3px rgba(77, 216, 196, 0.35);
+  --glow-sm: 0 0 12px rgba(77, 216, 196, 0.25);
+}
+
+/* Type scale utilities */
+.display {
+  font-size: 56px;
+  line-height: 60px;
+  font-weight: 700;
+}
+.heading-lg {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+}
+.heading-md {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.body {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.body-sm {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.label {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.code {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .display {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .heading-lg {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

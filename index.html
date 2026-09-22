@@ -201,14 +201,15 @@
       </article>
 
       <article class="card">
-        <h3 class="card-title heading-md">Scalable Discussion Forum Platform</h3>
-        <p class="card-desc body">Event-driven forum on Kafka with idempotent write APIs, rate limiting, and stateless load balancing — designed and load-tested solo.</p>
+        <h3 class="card-title heading-md">Online Shopping App</h3>
+        <p class="card-desc body">Microservices e-commerce platform — an API gateway and service discovery in front of product, order, inventory, and notification services, each independently deployable and horizontally scalable.</p>
         <div class="card-tags label">
-          <span class="card-tag">Java</span><span class="card-tag">Spring Boot</span><span class="card-tag">Kafka</span><span class="card-tag">MySQL</span><span class="card-tag">Redis</span>
+          <span class="card-tag">Java</span><span class="card-tag">Spring Boot</span><span class="card-tag">Spring Cloud</span><span class="card-tag">Kafka</span><span class="card-tag">Keycloak</span><span class="card-tag">Resilience4j</span><span class="card-tag">Prometheus</span>
         </div>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> load-tested to <span class="metric">10K+</span> concurrent users, <span class="metric">5K+</span> RPS</p>
-        <p class="card-log code"><span class="tag-info">[INFO]</span> sustained <span class="metric">99.9%</span> read availability under container kills</p>
-        <a class="btn btn-text label card-link" href="https://github.com/inferno-40" target="_blank" rel="noopener">&gt;_ VIEW SOURCE</a>
+        <p class="card-log code"><span class="tag-info">[INFO]</span> <span class="metric">6-service</span> backend — gateway, discovery, product/order/inventory/notification</p>
+        <p class="card-log code"><span class="tag-info">[INFO]</span> event-driven order pipeline on Kafka, with Resilience4j retry/circuit-breaker policies</p>
+        <p class="card-log code"><span class="tag-info">[INFO]</span> traced &amp; monitored across <span class="metric">3 datastores</span> — MongoDB, 2× PostgreSQL</p>
+        <a class="btn btn-text label card-link" href="https://github.com/inferno-40/Online-shopping-app" target="_blank" rel="noopener">&gt;_ VIEW SOURCE</a>
       </article>
     </div>
   </section>

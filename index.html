@@ -83,7 +83,7 @@
           <span class="dot animate-pulse-signal" aria-hidden="true"></span> open to SDE-2 roles
         </div>
         <h1 class="hero-headline display">I build the<br /><span class="accent">systems</span><br />behind the scale.</h1>
-        <p class="hero-sub body">3+ years shipping resilient backends that stay fast under load — clinical data pipelines, high-throughput search, and the infrastructure that keeps them running. I care about the parts users never see.</p>
+        <p class="hero-sub body">3+ years shipping resilient backends that stay fast under load — event-driven document exchange, high-throughput search, and the infrastructure that keeps them running. I care about the parts users never see.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#work"><span>view_projects.sh</span><span class="sweep" aria-hidden="true"></span></a>
           <a class="btn btn-secondary" href="#experience">experience.log</a>
@@ -98,7 +98,7 @@
       </div>
       <div class="metric">
         <div class="metric-value">55<span class="unit">M+</span></div>
-        <div class="metric-label">patient records at scale</div>
+        <div class="metric-label">records at scale</div>
       </div>
       <div class="metric">
         <div class="metric-value">45<span class="unit">K+</span></div>
@@ -117,7 +117,7 @@
     <h2 class="section-title heading-lg">Backend engineer, systems-first.</h2>
 
     <div class="about-body body">
-      <p>I'm a backend engineer with <strong>3+ years</strong> building high-throughput, event-driven distributed systems in Java and Kafka. I'm currently an SDE 2 at Oracle, working on the Clinical Data Exchange Hub (CDeX) — moving clinical documents between healthcare providers and payers across 12M+ weekly events and 55M+ patient records.</p>
+      <p>I'm a backend engineer with <strong>3+ years</strong> building high-throughput, fault-tolerant distributed systems in Java and Kafka. I'm currently an SDE 2 at Oracle, working on an event-driven document-exchange platform that handles 12M+ weekly events across 55M+ records.</p>
       <p>Before Oracle, I spent two years at ZL Technologies driving backend feature development within Enterprise Analytics, including a stint as tech lead for a 4-engineer team. I graduated from IIT Roorkee in 2023.</p>
       <p>I care about clean, well-tested code and solving hard problems at scale — and I'm open to backend / SDE-2 opportunities in distributed systems and high-scale infrastructure.</p>
     </div>
@@ -145,7 +145,7 @@
         <div class="work-info">
           <span class="work-index">01 / case study</span>
           <h3 class="work-name heading-md">Document-Search Subsystem</h3>
-          <p class="work-desc">3-microservice search layer for Oracle's Clinical Data Exchange Hub — authored the design RFCs, built one service end to end, and co-developed the rest.</p>
+          <p class="work-desc">3-microservice document-search subsystem for Oracle's event-driven document-exchange platform — authored the design RFCs and data flow, built one service end to end, and co-developed the rest.</p>
           <div class="work-tags">
             <span class="work-tag">Java</span><span class="work-tag">Spring Boot</span><span class="work-tag">Kafka</span><span class="work-tag">OKE</span>
           </div>
@@ -155,9 +155,8 @@
           <div class="flow-panel">
             <div class="flow-head"><span>request-flow</span><span class="healthy">healthy</span></div>
             <div class="flow-steps">
-              <span class="flow-step">ingest</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
-              <span class="flow-step">search</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
-              <span class="flow-step">notify</span>
+              <span class="flow-step">events</span><span class="flow-wire"><span class="pulse animate-flow"></span></span>
+              <span class="flow-step">search</span>
             </div>
             <div class="flow-metric">
               <p class="flow-metric-value">90%→65%</p>
@@ -240,7 +239,11 @@
         </div>
         <div class="stack-row">
           <span class="stack-row-label">languages:</span>
-          <div class="stack-row-items"><span>SQL</span><span>C++</span><span>Micronaut</span></div>
+          <div class="stack-row-items"><span>SQL</span><span>C++</span></div>
+        </div>
+        <div class="stack-row">
+          <span class="stack-row-label">frameworks:</span>
+          <div class="stack-row-items"><span>Spring Cloud</span><span>Micronaut</span></div>
         </div>
         <div class="stack-row">
           <span class="stack-row-label">messaging:</span>
@@ -256,11 +259,11 @@
         </div>
         <div class="stack-row">
           <span class="stack-row-label">security:</span>
-          <div class="stack-row-items"><span>JWT</span><span>OAuth2</span><span>TLS (DigiCert)</span></div>
+          <div class="stack-row-items"><span>JWT</span><span>OAuth2</span><span>Keycloak</span><span>TLS (DigiCert)</span></div>
         </div>
         <div class="stack-row">
           <span class="stack-row-label">observability:</span>
-          <div class="stack-row-items"><span>Splunk</span><span>New Relic</span><span>Grafana</span><span>Prometheus</span><span>OCI MQL</span></div>
+          <div class="stack-row-items"><span>Splunk</span><span>New Relic</span><span>Grafana</span><span>Prometheus</span><span>Zipkin</span><span>OCI MQL</span></div>
         </div>
         <div class="stack-row">
           <span class="stack-row-label">testing:</span>
@@ -283,11 +286,11 @@
           <p class="exp-date">Jun 2025 — Present</p>
           <h3 class="exp-role heading-md">SDE 2 · <span class="company">Oracle</span></h3>
           <p class="exp-location">Remote</p>
-          <p class="exp-bullet"><span class="glyph">&gt;</span>co-designed a 3-microservice document-search subsystem via design RFCs, handling 25% of CDeX's 12M+ weekly events and cutting peak CPU load 90% → 65%</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>co-designed a 3-microservice document-search subsystem via design RFCs, handling 25% of the 12M+ weekly events and cutting peak CPU load 90% → 65%</p>
           <p class="exp-bullet"><span class="glyph">&gt;</span>cut document transmission failures 25% across 500K+ weekly exchanges by reworking retry logic with backoff, jitter, and idempotency checks</p>
           <p class="exp-bullet"><span class="glyph">&gt;</span>built Docker-based MinIO and Oracle DB simulators from scratch, cutting pre-deployment testing time 30%</p>
-          <p class="exp-bullet"><span class="glyph">&gt;</span>raised unit test coverage 60% → 85% by introducing AI-assisted PR reviews and JaCoCo coverage checks in the Maven build</p>
-          <p class="exp-bullet"><span class="glyph">&gt;</span>wrote canary test scenarios across 5 production services, enabling zero-downtime deployments and faster rollback</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>raised unit test coverage 60% → 85% by introducing Codex-assisted PR reviews and JaCoCo coverage checks in the Maven build</p>
+          <p class="exp-bullet"><span class="glyph">&gt;</span>wrote canary test scenarios for 5 production services to verify deployment sanity, and set up REST-based inter-service communication across them, enabling faster rollback when a deployment fails</p>
         </li>
         <li class="exp-item">
           <span class="exp-dot" aria-hidden="true"></span>

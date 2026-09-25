@@ -976,7 +976,8 @@ html.reveal-anim .reveal.is-in {
   border-top: 1px solid var(--line);
 }
 .foot-inner {
-  padding: var(--space-8) 0;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -996,8 +997,10 @@ html.reveal-anim .reveal.is-in {
 }
 .foot-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-2) var(--space-5);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1019,7 +1022,11 @@ html.reveal-anim .reveal.is-in {
 }
 .foot-status .dot {
   position: relative;
-  color: var(--signal);
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--signal);
 }
 .foot-status .dot::after {
   content: "";
